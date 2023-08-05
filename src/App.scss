@@ -1,0 +1,63 @@
+.contenedor{
+    width: 100vw;
+    height: 150px;
+    display : flex;
+    align-items: center;
+    justify-content: center;
+
+    nav{
+        width: 350px;
+        height: 50px;
+        background-color: #e1e7c4be;
+        display : flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+    }   
+
+    ul{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+
+        a{
+            text-decoration: none;
+            color : inherit
+        }
+
+        .item{
+            cursor : pointer;
+
+            .subrayado{
+                width : 100%;
+                border-radius: 10px;
+                height : 5px;
+                background-color: #001aff;
+            }
+
+            .subrayadoDes{
+                @extend .subrayado;
+                display : none;
+            }
+
+        }
+
+        .itemAct{
+            @extend .item;
+
+            li{
+                font-weight: 800;
+                color : #001aff;
+            }
+
+
+        }
+
+        li{
+            list-style: none;
+            font-weight: 600;
+        }
+    }
+
+}
